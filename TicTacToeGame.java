@@ -3,6 +3,20 @@ import java.util.*;
 public class TicTacToeGame 
 {
     public char playersymbol,computersymbol;
+    public void showBoard(char[] board)
+    {
+    	System.out.println("Current board:");
+    	int count=0;
+    	for(int index=1;index<board.length;index++)
+    	{
+    		System.out.print(board[index]+" ");
+    		if(count==2 || count==5)
+    		{
+    			System.out.println();
+    		}
+    		count=count+1;
+    	}
+    }
 	public void determinesymbol()
 	{
 		Scanner sc = new Scanner(System.in);
@@ -31,11 +45,11 @@ public class TicTacToeGame
 		char[] board = new char [10];
 		for(int index=0;index<10;index++)
 	    {
-			board[index]=' ';
+			board[index]='0';
 		}
 		TicTacToeGame obj1 = new TicTacToeGame();
 		obj1.determinesymbol();
-		
+		obj1.showBoard(board);
     }
 
 }
