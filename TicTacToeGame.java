@@ -7,15 +7,20 @@ public class TicTacToeGame
     {
     	System.out.println("Current board:");
     	int count=0;
+    	System.out.println("--------------");
     	for(int index=1;index<board.length;index++)
     	{
-    		System.out.print(board[index]+" ");
-    		if(count==2 || count==5)
+    		
+    		System.out.print(board[index]+" | ");
+    		if(count==2 || count==5 || count==8)
     		{
     			System.out.println();
+    			System.out.println("--------------");
     		}
+    		
     		count=count+1;
     	}
+    	
     }
 	public void determinesymbol()
 	{
@@ -45,7 +50,7 @@ public class TicTacToeGame
 		char[] board = new char [10];
 		for(int index=0;index<10;index++)
 	    {
-			board[index]='0';
+			board[index]=' ';
 		}
 		TicTacToeGame obj1 = new TicTacToeGame();
 		obj1.determinesymbol();
