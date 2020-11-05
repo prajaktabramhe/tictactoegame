@@ -2,23 +2,27 @@ package tictoctoegame;
 import java.util.*;
 public class TicTacToeGame 
 {
-    public char player,computer;
+    public char playersymbol,computersymbol;
 	public void determinesymbol()
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your Symbol:");
-		char c = sc.next().charAt(0);
-		 if (c=='X')
+		char symbol = sc.next().charAt(0);
+		 if (symbol=='X')
 		 {
-			 player='X';
-			 computer='O';
-			 System.out.println("player:"+player+" computer:"+computer);
+			 playersymbol='X';
+			 computersymbol='O';
+			 System.out.println("player:"+playersymbol+" computer:"+computersymbol);
+		 }
+		 else if (symbol=='O')
+		 {
+			 playersymbol='O';
+			 computersymbol='X';
+			 System.out.println("player:"+playersymbol+" computer:"+computersymbol);
 		 }
 		 else
 		 {
-			 player='O';
-			 computer='X';
-			 System.out.println("player:"+player+" computer:"+computer);
+			 System.out.println("You have entered character other than X or O");
 		 }
 		 
 	}
