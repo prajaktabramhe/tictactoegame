@@ -2,7 +2,8 @@ package tictoctoegame;
 import java.util.*;
 public class TicTacToeGame 
 {
-    public char playersymbol,computersymbol;
+    public char computersymbol;
+    public String playersymbol;
     public void showBoard(char[] board)
     {
     	System.out.println("Current board:");
@@ -26,16 +27,16 @@ public class TicTacToeGame
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your Symbol:");
-		char symbol = sc.next().charAt(0);
-		 if (symbol=='X')
+		String symbol = sc.next();
+		 if  (symbol.toUpperCase().equals("X"))
 		 {
-			 playersymbol='X';
+			 playersymbol=symbol;
 			 computersymbol='O';
 			 System.out.println("player:"+playersymbol+" computer:"+computersymbol);
 		 }
-		 else if (symbol=='O')
+		 else if (symbol.toUpperCase().equals("O"))
 		 {
-			 playersymbol='O';
+			 playersymbol=symbol;
 			 computersymbol='X';
 			 System.out.println("player:"+playersymbol+" computer:"+computersymbol);
 		 }
